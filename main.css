@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Josefin+Slab:wght@300;500;600&family=Lato&family=Lexend:wght@400;500&display=swap');
+
+:root {
+    --Josefin: "Josefin Slab", sans-serif;
+    --Lexend: 'Lexend', sans-serif;
+    --Lato: 'Lato', sans-serif;
+    --Abel: 'Abel', sans-serif;
+    --light-blue: rgba(33, 141, 241, 1);
+    --dark-blue: rgba(33, 141, 241, 0.31);
+    --dark-grey: rgba(35, 43, 51, 0.9);
+    --light-cyan: rgba(130, 180, 195, 1);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+}
+
+.modals {
+    display: none;
+    z-index: 1000;
+}
+
+h2, h1, h3 {
+    font-family: var(--Lexend);
+}
+
+p, span, strong {
+    font-family: var(--Lato);
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    height: 10vh;
+    width: 100%;
+
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul {
+    display: flex;
+    text-align: center;
+
+
+}
+
+header nav ul li a {
+    font-family: var(--Abel);
+    font-weight: bolder;
+    color: rgb(0, 0, 83);
+    font-size: 1.3rem;
+}
+
+header nav .nav-items li {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+header nav .nav-items a {
+    padding: 1rem 2rem;
+    padding-top: 1rem;
+    justify-self: center;
+    text-align: center;
+    align-content: center;
+    vertical-align: middle;
+}
+
+header nav .social li {
+    padding: 0.2rem;
+    background-color: rgb(50, 111, 151);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: rgb(255, 255, 255);
+}
+
+header nav .social {
+    padding-top: .5rem;
+}
+
+header nav .social a {
+    justify-self: middle;
+    text-align: center;
+    color: aliceblue;
+}
+
+.brand {
+    padding: .5rem 2rem;
+    color: rgb(43, 43, 109);
+}
+
+/* Scroll-Up */
+.scroll-top {
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+    z-index: 2;
+    margin: 2rem;
+    font-size: 2rem;
+    background-color: rgb(33, 216, 155);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+    display: none;
+}
+
+/* ////// */
+main {
+    position: relative;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(6, 9, 36, 0.8), rgba(0, 0, 0, 0.8)), url("assets/bg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero {
+    text-align: center;
+    padding-top: 7rem;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    color: white;
+    padding: 1rem;
+}
+
+.hero h4 {
+    font-family: var(--Lato);
+    color: var(--light-cyan);
+    font-size: 1.5rem;
+    padding: 1rem;
+    letter-spacing: 2px;
+}
+
+.hero .buttons {
+    padding: 1rem 2rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.btn {
+    padding: .5rem 2rem;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--light-blue);
+    color: white;
+    font-size: 1rem;
+    font-family: var(--Lexend);
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
+    justify-content: center;
+}
+
+.display-2 {
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.display-3 {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+p {
+    font-family: var(--Josefin);
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: .2rem;
+}
+
+.buttons .btn {
+    margin: 1rem;
+}
+
+.buttons .btn.btn-donate {
+    background-color: rgb(11, 68, 28);
+}
+
+.buttons .btn.btn-donate:hover {
+    background-color: transparent;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.buttons .btn.btn-more {
+    color: rgb(0, 0, 0);
+    transition: .3s all;
+}
+
+.buttons .btn.btn-more:hover {
+    border: 1px solid white;
+    transition: .3s all;
+}
+
+html {
+    position: relative;
+}
+
+/* About Us */
+main .about-us {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 2px solid grey;
+    background-color: rgba(29, 29, 26, 0.76);
+    color: white;
+    padding: 2rem;
+
+}
+
+.video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 100%;
+    min-width: 100%;
+    width: 177.77777778vh;
+    z-index: -1;
+
+}
+
+.about-us .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.content .story {
+    background: rgba(248, 248, 248, 0.863);
+    height: 80vh;
+    color: rgb(0, 0, 0);
+    padding: 2rem;
+    margin-top: 1rem;
+    border-radius: 20px;
+    box-shadow: 0px 2px 2px 2px grey;
+
+}
+
+.content .player {
+    height: 80vh;
+    background: rgba(43, 38, 38, 0.863);
+    height: 80vh;
+    color: rgb(0, 0, 0);
+    padding: 2rem;
+    margin-top: 1rem;
+    border-radius: 20px;
+    box-shadow: 0px 2px 2px 2px grey;
+    position: relative;
+
+}
+
+.video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    overflow: hidden;
+    display: none;
+    border-radius: 20px;
+}
+
+.video-overlay img {
+    min-height: 100%;
+    min-width: 100%;
+    position: center;
+    z-index: -1;
+
+}
+
+.content .video h2 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.content .player video {
+    max-width: 800px;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.content .player .buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    align-items: center;
+}
+
+.content .player .buttons .share-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    background-color: #fff;
+    height: fit-content;
+    padding: .5rem .5rem;
+    border-radius: 20px;
+}
+
+.content .player .buttons .share-div span {
+    padding: 0 .5rem;
+}
+
+.content .player .buttons .share-div span i {
+    cursor: pointer;
+}
+
+.player .video {
+    position: relative;
+}
+
+/* Video Player */
+/* 
+.controls {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    background: rgba(47, 64, 80, 0.555);
+    z-index: 1;
+
+}
+
+.video-buttons {}
+
+.video-buttons button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+}
+
+.video-buttons button:before {
+    content: "\f144";
+    font-family: 'Font Awesome 5 Free';
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    font-size: 28px;
+    color: blue;
+    -webkit-font-smoothing: antialiased;
+    padding: 1px auto;
+}
+
+.video-buttons button.play:before {
+    content: '\f144';
+}
+
+.video-buttons button.pause:before {
+    content: '\f28b';
+}
+
+.orange-bar {
+    height: 10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: rgb(228, 46, 0);
+    z-index: 2;
+}
+
+.orange-juice {
+    color: rgb(228, 46, 0);
+    width: 100px;
+    height: 10px;
+} */
+
+/* ///// */
+
+.content p {
+    text-align: left;
+}
+
+/* .main .about-us .video-bg {
+    height: 400px;
+    width: 177.77777778vh;
+    min-width: 100%;
+    min-height: 56.25vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: scale-down;
+    z-index: -1;
+
+} */
+
+
+
+/* //// */
+
+
+/* Footer */
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    background-color: rgb(46, 46, 85);
+    color: white;
+    width: 100%;
+}
+
+footer div {
+    padding: 1rem;
+    text-align: center;
+}
+
+footer h2 {
+    margin-bottom: 1rem;
+}
+
+footer .info p {
+    padding: 0rem 2rem;
+}
+
+footer .info ul {
+    display: flex;
+    margin: 1rem auto;
+    background-color: rgb(63, 57, 57);
+    width: fit-content;
+    padding: 1rem 0rem;
+    border-radius: 10px;
+
+}
+
+footer .info ul li a {
+    padding: 0rem 1rem;
+    color: white;
+}
+
+footer .links {
+    text-align: left;
+    margin-left: 2rem;
+    padding: 1rem 0rem;
+}
+
+footer .links a {
+    color: rgb(125, 255, 175);
+    text-align: left;
+    padding: 1rem;
+    font-family: var(--Lexend);
+
+}
+
+footer .form form {
+    padding: 1rem;
+    width: 100%;
+    display: block;
+    text-align: left;
+    color: white;
+}
+
+footer .form p {
+    text-align: left;
+    margin-left: 1rem;
+}
+
+footer .form form input {
+    display: block;
+    margin: .3rem;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    border: none;
+    font-family: var(--Josefin);
+    font-weight: bolder;
+    color: rgb(36, 9, 9);
+    background-color: rgb(53, 53, 53);
+    border: 1px solid grey;
+}
+
+footer .form form input::placeholder {
+    color: white;
+    font-weight: 1.2rem;
+}
+
+footer .form form input:focus {
+    border: 1px solid grey;
+    outline: none;
+}
+
+/* Footer */
