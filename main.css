@@ -127,6 +127,7 @@ nav .nav {
 .brand, .brand a {
     padding: .5rem 2rem;
     color: rgb(43, 43, 109);
+    cursor: pointer;
 }
 
 /* Scroll-Up */
@@ -625,6 +626,12 @@ footer .info ul {
 footer .info ul li a {
     padding: 0rem 1rem;
     color: white;
+    transition: .3s all;
+}
+
+footer .info ul li a:hover {
+    color: rgb(0, 153, 38);
+    transition: .3s;
 }
 
 footer .links {
@@ -676,6 +683,19 @@ footer .form form input::placeholder {
 footer .form form input:focus {
     border: 1px solid grey;
     outline: none;
+}
+
+button {
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    color: black;
+    background-color: rgba(117, 112, 112, 0.644);
+    border: 1px solid rgb(0, 0, 0) ima !important;
+    transition: .2s all;
+
 }
 
 /* Footer */
@@ -852,7 +872,6 @@ footer .form form input:focus {
         gap: .3rem;
     }
 
-    .post.trending {}
 }
 
 @media only screen and (max-width:705px) {
@@ -1062,5 +1081,5 @@ footer .form form input:focus {
     .sidebar form {
         margin: auto;
     }
-    .
+
 }

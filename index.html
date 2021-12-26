@@ -11,8 +11,22 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- //// -->
     <title>Brainz| Home</title>
-    <link rel="stylesheet" href="main.css" class="css">
-    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./main.css" class="css">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+
+
+    <!-- Facebook tags -->
+    <meta property="og:url" content="https://feyton.github.io/brainz/" />
+    <meta property="og:title" content="Brainz" />
+    <meta property="og:image" content="https://feyton.github.io/brainz/assets/team.jpg" />
+    <meta property="og:image:alt" content="Beautiful Brainz" />
+    <!-- End of Facebook tags -->
+
+    <!-- Twitter tags -->
+    <meta name="twitter:image" content="https://feyton.github.io/brainz/assets/team.jpg" />
+    <meta property="twitter:image:alt" content="Beautiful Brainz" />
+    <meta name="twitter:card" content="Quality Education" />
+    <meta name="twitter:site" content="@feytonf" />
 </head>
 
 <body>
@@ -27,7 +41,7 @@
     <header>
         <nav>
             <div class="brand">
-                <h2>BRAINZ</h2>
+                <h2 onclick="window.location.href='index.html'">BRAINZ</h2>
             </div>
             <div class="div nav-toggle mobile">
                 <i class="fa fa-bars"></i>
@@ -36,16 +50,20 @@
 
                 <ul class="nav-items">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html">Blog</a></li>
-                    <li><a href="index.html">Projects</a></li>
-                    <li><a href="index.html">BBHUB</a></li>
-                    <li><a href="index.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html" class="coming-soon">Projects</a></li>
+                    <li><a href="index.html" class="coming-soon">BBHUB</a></li>
+                    <li><a href="index.html" class=" coming-soon">Contact</a></li>
                 </ul>
                 <ul class="social">
-                    <li><a href="#facebook"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="#facebook"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#facebook"><i class="fab fa-linkedin"></i></a></li>
-                    <li><a href="#facebook"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://web.facebook.com/Beautifulbrainz" target="_blank"><i
+                                class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/BeautifulBrainx" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/company/beautiful-brainz/" target="_blank"><i
+                                class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://www.instagram.com/beautiful_brainz1/" target="_blank"><i
+                                class="fab fa-instagram"></i></a></li>
                 </ul>
             </div>
         </nav>
@@ -57,8 +75,10 @@
                 <h4>Quality Education, Her Foundation to Quality Life</h4>
             </div>
             <div class="buttons">
-                <button class="btn btn-donate">DONATE</button>
-                <button class="btn btn-more"><i class="fas fa-play"></i>&nbsp;LEARN MORE</button>
+                <a href="https://saveplus.io/causes/Help-500-young-girls-aged-8-12-stay-in-school-Y0921054908/donate?lang=en"
+                    target="_blank" class="btn btn-donate">DONATE</a>
+                <button class="btn btn-more" onclick="window.location.href='#about-us'"><i
+                        class="fas fa-play"></i>&nbsp;LEARN MORE</button>
             </div>
 
         </div>
@@ -86,8 +106,12 @@
                     </div>
                 </div>
                 <hr>
+                <br>
+                <br>
                 <h2>Trending Posts</h2>
+                <br>
                 <div class="blog-posts">
+
 
                     <!-- Trending Post -->
                     <div class="post trending">
@@ -180,7 +204,7 @@
             </aside>
 
         </div>
-        <div class="about-us center">
+        <div class="about-us center" id="about-us">
 
             <h2 class="display-2">About Us</h2>
             <video autoplay muted loop class="video-bg" id="bg-video">
@@ -212,7 +236,12 @@
                     <div class="buttons">
                         <div class="share-div">
                             <span>Share</span>
-                            <span><i class="fab fa-facebook"></i></span>
+                            <span onclick="
+                            window.open(
+                              'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href), 
+                              'facebook-share-dialog', 
+                              'width=626,height=436'); 
+                            return false;"><i class="fab fa-facebook"></i></span>
                             <span><i class="fab fa-twitter"></i></span>
 
                         </div>
@@ -255,7 +284,7 @@
                             Hub and Back to School Challenge, we are raising money to support young girls aged between
                             8-12 who dropped out of school or who are on the edge of dropping out due to lack of basic
                             school requirements like school uniforms, shoes, books and sanitary materials.</p>
-                        <button>Learn more</button>
+                        <button class="btn btn-primary">Learn more</button>
                     </div>
                     <div class="card service">
                         <h3>Girl Child Mentorship</h3>
@@ -263,7 +292,7 @@
                         <p>We train young girls to focus and prioritize their education, create positive values and
                             voice their opinions. Furthermore we engage young women who are successful in their careers
                             to inspire and motivate young girls.</p>
-                        <button>Learn more</button>
+                        <button class="btn btn-primary">Learn more</button>
                     </div>
                     <div class="card service">
                         <h3>Beautiful Brainz Hub (BBH)</h3>
@@ -274,7 +303,7 @@
                             BBH Members teach digital skills to girls aged 8-12 from vulnerable communities, so that
                             they grow up loving and more familiar with basic technology skills including; computer
                             hardware ware(basics), basic MS.</p>
-                        <button>Visit</button>
+                        <button class="btn btn-primary">Visit</button>
                     </div>
                 </div>
             </div>
@@ -288,10 +317,14 @@
                 lives</p>
             <div class="social-buttons">
                 <ul>
-                    <li><a href="#facebook"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="#facebook"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#facebook"><i class="fab fa-linkedin"></i></a></li>
-                    <li><a href="#facebook"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://web.facebook.com/Beautifulbrainz" target="_blank"><i
+                                class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/BeautifulBrainx" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/company/beautiful-brainz/" target="_blank"><i
+                                class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://www.instagram.com/beautiful_brainz1/" target="_blank"><i
+                                class="fab fa-instagram"></i></a></li>
 
                 </ul>
             </div>
